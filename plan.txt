@@ -32,4 +32,3 @@ WEB CLIENT:
 		-	Because I am not generalizing this for public use, no account stuff is needed
 
 
-Checking git
