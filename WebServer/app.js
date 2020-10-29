@@ -9,6 +9,9 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -39,3 +42,16 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'user',
+  password: 'password',
+  database: 'database name'
+});
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected!');
+});
